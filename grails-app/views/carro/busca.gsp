@@ -58,13 +58,13 @@
 </div>
 
 <h1>Tela de Buscas<br/></h1>
-<p><br/>Aqui a busca pode ser realizada pela a placa do veiculo pertencente ao Estado do Rio de Janeiro<br/>
+<p><br/>Aqui a busca pode ser realizada pelo o Chassi do veiculo pertencente ao Estado do Rio de Janeiro<br/>
 
 <br/><h2>Exemplo.: edc2134</h2>
 
         <p><br/></p>
        <ul> <g:form action="buscar">
-            Digite a placa: <g:textField name="nome"></g:textField>
+            Digite o Chassi: <g:textField name="nome"></g:textField>
             <fildset class="buttons">
                 <g:submitButton name="busca" class="save"> </g:submitButton>
             </fildset>

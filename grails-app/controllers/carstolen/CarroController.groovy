@@ -30,8 +30,8 @@ class CarroController {
     }
 
     //buscas
-    def buscar (Carro buscado){
-        def car = Carro.findByCorPrediminante(corPerdiminante == buscado)
+    def buscar (String buscado){
+        def car = Carro.findByChassi(corPerdiminante == buscado)
 
         if(car){
 
