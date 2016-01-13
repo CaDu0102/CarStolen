@@ -80,6 +80,11 @@
 					margin-top: 0;
 				}
 			}
+
+            li{
+                padding: 2px;
+                margin-left: 5px;
+            }
 		</style>
 	</head>
 	<body>
@@ -189,7 +194,7 @@
 		</div>
 		<div id="page-body" role="main">
 			<h1>&nbsp;Bem Vindo ao CarStolen &nbsp;(${session.policial?.nomeCompleto})<!-- //Mostra o nome do usuario -->
-            &nbsp;<g:link controller="policial" action="sair">Sair!</g:link> <!-- //botao de logoff --></h1>
+            &nbsp;<g:link controller="policia" action="sair">Sair!</g:link> <!-- //botao de logoff --></h1>
 			<p><br/>Você pode fazer a consulta de veículos roubados de RJ e assim evitar de ter que devolver o
             seu carro e ainda perder todo o seu investimento.
             É importante que vários pontos sejam considerados quando você compra um carro usado, se for em
@@ -200,7 +205,9 @@
 				<h2>Available Controllers:<br/></h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+
+                        <li class="controller"><g:link controller="${c.logicalPropertyName}">${c.name}</g:link></li>
+
 					</g:each>
 				</ul>
 			</div>
