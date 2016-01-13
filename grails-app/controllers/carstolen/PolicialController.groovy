@@ -48,15 +48,12 @@ class PolicialController {
     }
 
 
-
-
-
 //Encerra a sessão
     def sair(){
+
         session.policial = null
-        //  render(view: 'logar')         //Mostra a paginda de logar novamente
         redirect(action: 'paginaLogin')
-        //render(view: 'index')
+
     }
 
 

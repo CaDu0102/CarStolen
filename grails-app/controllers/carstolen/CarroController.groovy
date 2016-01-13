@@ -31,7 +31,7 @@ class CarroController {
 
     //buscas
     def buscar (Carro buscado){
-        def car = Carro.findByLetraPlacaAndNumeroPlaca (letraPlaca== buscado || numeroPlaca==buscado)
+        def car = Carro.findByCorPrediminante(corPerdiminante == buscado)
 
         if(car){
 

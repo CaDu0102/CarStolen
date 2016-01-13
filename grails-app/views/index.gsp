@@ -53,7 +53,8 @@
 
 			p {
 				line-height: 1.5;
-				margin: 0.25em 0;
+				margin: 0.50em 0;
+
 			}
 
 			#controller-list ul {
@@ -84,35 +85,119 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-			<h1>Application Status</h1>
+			<h1>ES.: RIO DE JANEIRO<br/></h1>
 			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
+				<li><br/>Angra dos Reis<br/>
+                Aperibé<br/>
+                Araruama<br/>
+                Areal<br/>
+                Armação dos Búzios<br/>
+                Arraial do Cabo<br/>
+                Barra do Piraí<br/>
+                Barra Mansa<br/>
+                Belford Roxo<br/>
+                Bom Jardim<br/>
+                Bom Jesus do Itabapoana<br/>
+                Cabo Frio<br/>
+                Cachoeiras de Macacu<br/>
+                Cambuci<br/>
+                Campos dos Goytacazes<br/>
+                Cantagalo<br/>
+                Carapebus<br/>
+                Cardoso Moreira<br/>
+                Carmo<br/>
+                Casimiro de Abreu<br/>
+                Comendador Levy Gasparian<br/>
+                Conceição de Macabu<br/>
+                Cordeiro<br/>
+                Duas Barras<br/>
+                Duque de Caxias<br/>
+                Engenheiro Paulo de Frontin<br/>
+                Guapimirim<br/>
+                Iguaba Grande<br/>
+                Itaboraí<br/>
+                Itaguaí<br/>
+                Italva<br/>
+                Itaocara<br/>
+                Itaperuna<br/>
+                Itatiaia<br/>
+                Japeri<br/>
+                Laje do Muriaé<br/>
+                Macaé<br/>
+                Macuco<br/>
+                Magé<br/>
+                Mangaratiba<br/>
+                Maricá<br/>
+                Mendes<br/>
+                Mesquita<br/>
+                Miguel Pereira<br/>
+                Miracema<br/>
+                Natividade<br/>
+                Nilópolis<br/>
+                Niterói<br/>
+                Nova Friburgo<br/>
+                Nova Iguaçu<br/>
+                Paracambi<br/>
+                Paraíba do Sul<br/>
+                Paraty<br/>
+                Paty do Alferes<br/>
+                Petrópolis<br/>
+                Pinheiral<br/>
+                Piraí<br/>
+                Porciúncula<br/>
+                Porto Real<br/>
+                Quatis<br/>
+                Queimados<br/>
+                Quissamã<br/>
+                Resende<br/>
+                Rio Bonito<br/>
+                Rio Claro<br/>
+                Rio das Flores<br/>
+                Rio das Ostras<br/>
+                Rio de Janeiro<br/>
+                Santa Maria Madalena<br/>
+                Santo Antônio de Pádua<br/>
+                São Fidélis<br/>
+                São Francisco de Itabapoana<br/>
+                São Gonçalo<br/>
+                São João da Barra<br/>
+                São João de Meriti<br/>
+                Sao José de Ubá<br/>
+                São José do Vale do Rio Preto<br/>
+                São Pedro da Aldeia<br/>
+                São Sebastião do Alto<br/>
+                Sapucaia<br/>
+                Saquarema<br/>
+                Seropédica<br/>
+                Silva Jardim<br/>
+                Sumidouro<br/>
+                Tanguá<br/>
+                Teresópolis<br/>
+                Trajano de Morais<br/>
+                Três Rios<br/>
+                Valença<br/>
+                Varre-Sai<br/>
+                Vassouras<br/>
+                Volta Redonda</li>
 			</ul>
 			<h1>Installed Plugins</h1>
 			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
+				<li>
+                    <p>None</p>
+				</li>
 			</ul>
 		</div>
 		<div id="page-body" role="main">
-			<h1>Welcome to Grails (${session.policial?.nomeCompleto})<!-- //Mostra o nome do usuario -->
-            <g:link controller="usuario" action="sair">Sair!</g:link> <!-- //botao de logoff --></h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
+			<h1>&nbsp;Bem Vindo ao CarStolen &nbsp;(${session.policial?.nomeCompleto})<!-- //Mostra o nome do usuario -->
+            &nbsp;<g:link controller="policial" action="sair">Sair!</g:link> <!-- //botao de logoff --></h1>
+			<p><br/>Você pode fazer a consulta de veículos roubados de RJ e assim evitar de ter que devolver o
+            seu carro e ainda perder todo o seu investimento.
+            É importante que vários pontos sejam considerados quando você compra um carro usado, se for em
+            revendas de carros, peça para que o vendedor mostre-lhe a lista de multas e mostre que o carro
+            não foi roubado ou sinistrado.<br/><br/></p>
 
 			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
+				<h2>Available Controllers:<br/></h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>

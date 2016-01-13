@@ -1,4 +1,8 @@
+import carstolen.Carro
+import carstolen.Dono
 import carstolen.Policial
+import carstolen.Carro
+import carstolen.Dono
 
 class BootStrap {
 
@@ -10,12 +14,12 @@ class BootStrap {
         policial2.save(flush: true)
 
         //Criação de um Dono
-        //def dono = new Dono(nomeCompleto:'Maria dos Santos',cpf: '12332133123',email:'maria@gmail.com',telefoneFixo:'2137319989',telefoneMovel:'2199878325476' ,cnh:'32343167689')
-        //dono.save(flush: true)
+        def dono = new Dono(nomeCompleto:'Maria dos Santos',cpf: 'eqwe',email:'mariagmail.com',telefoneFixo:'eqwe',telefoneMovel:'ewqer' ,cnh:'eqwe')
+        dono.save(flush: true)
 
         //Criação de um Carro
-        //def carro = new Carro(corPrediminante:'Preto' ,letraPlaca:'DEC',numeroPlaca:0200, chassi:'12345543210987654', marca:'Nissan',modelo:'March' )
-        //carro.save(flush: true)
+        def carro = new Carro(corPrediminante:'Preto' ,letraPlaca:'DEC',numeroPlaca:0200, chassi:'12345543210987654',combustivel:'Gasolina', marca:'Nissan',modelo:'March',categoria:'Particular')
+        carro.save(flush: true)
 
     }
 
