@@ -23,47 +23,24 @@ class CarroController {
         respond new Carro(params)
     }
 
-    //busca
+
     // Controle de Buscas
     def telaBuscar (){
         render (view: 'busca')
     }
+
+    // Buscas
     def buscar(){
-        def nomeBuscado = params.nomeBuscado
+        def nome = params.nome
 
-        //def carros = Carro.findAllByChassi(nomeBuscado)
         def criteria = Carro.createCriteria()
-        /*
-         def carros = criteria.list{
-            or {
-                eq("chassi", nomeBuscado)
 
-            }
-         }
-         */
-        //def carros = Carro.findAll("from Carro where chassi=:nomeBuscado",[nomeBuscado:nomeBuscado])
-        def carros = Carro.findAll { chassi == nomeBuscado }
+        def carros = Carro.findAll { chassi == nome }
         if(!carros){
-            flash.message = "Está numeração de Chassi pode Não existir"
+            flash.message = "Está numeração de Chassi pode Não existir/(sequencia incorreta)"
         }
-        render(view: 'index',model: [carroInstance: carros])
+        render(view: 'index',model: [carroInstanceList: carros])
     }
-
-    /*//buscas (Desativada Não funciona)
-    def buscar (String buscado){
-        def car = Carro.findByChassi(corPerdiminante == buscado)
-
-        if(car){
-
-            render(view: 'index',model: [alunoInstanceList: alunos])    //consegue ir para index
-        }else {
-            flash.error = "Nenhuma placa com esses dados foram encontradas"
-            render(view: 'busca')     //volta para a mesma paginda de busca
-        }
-
-    }*/
-
-    // auterado ate aki
 
     @Transactional
     def save(Carro carroInstance) {
