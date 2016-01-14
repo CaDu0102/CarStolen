@@ -60,7 +60,7 @@
 <h1>Tela de Buscas<br/></h1>
 <p><br/>Aqui a busca pode ser realizada pelo o Chassi do veiculo pertencente ao Estado do Rio de Janeiro<br/>
 
-<br/><h2>Exemplo.: edc2134</h2>
+<br/><h2>Exemplo.: ID4GP258038108775</h2>
 
         <p><br/></p>
        <ul> <g:form action="buscar">

@@ -201,6 +201,15 @@
             revendas de carros, peça para que o vendedor mostre-lhe a lista de multas e mostre que o carro
             não foi roubado ou sinistrado.<br/><br/></p>
 
+            <p> Para acessar a buscas de chassi de Carro siga os botões : ( Carro > default.busca.label )</p>
+
+            <li>Mapeamento One-to-many de Carro/Dono</li>
+            <li>Possui Login</li>
+            <li>Filtro no login</li>
+            <li>Busca de Chassi de carros</li>
+            <li>Está no Git Hub com o Nome de <a href="https://github.com/CaDu0102/CarStolen1" target="_blank">CarStolen1</a></li>
+
+
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:<br/></h2>
 				<ul>
