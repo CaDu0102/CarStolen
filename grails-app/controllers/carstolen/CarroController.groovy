@@ -28,8 +28,28 @@ class CarroController {
     def telaBuscar (){
         render (view: 'busca')
     }
+    def buscar(){
+        def nomeBuscado = params.nomeBuscado
 
-    //buscas
+        //def carros = Carro.findAllByChassi(nomeBuscado)
+        def criteria = Carro.createCriteria()
+        /*
+         def carros = criteria.list{
+            or {
+                eq("chassi", nomeBuscado)
+
+            }
+         }
+         */
+        //def carros = Carro.findAll("from Carro where chassi=:nomeBuscado",[nomeBuscado:nomeBuscado])
+        def carros = Carro.findAll { chassi == nomeBuscado }
+        if(!carros){
+            flash.message = "Está numeração de Chassi pode Não existir"
+        }
+        render(view: 'index',model: [carroInstance: carros])
+    }
+
+    /*//buscas (Desativada Não funciona)
     def buscar (String buscado){
         def car = Carro.findByChassi(corPerdiminante == buscado)
 
@@ -41,7 +61,7 @@ class CarroController {
             render(view: 'busca')     //volta para a mesma paginda de busca
         }
 
-    }
+    }*/
 
     // auterado ate aki
 
