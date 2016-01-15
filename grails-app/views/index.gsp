@@ -194,7 +194,7 @@
 		</div>
 		<div id="page-body" role="main">
 			<h1>&nbsp;Bem Vindo ao CarStolen &nbsp;(${session.policial?.nomeCompleto})<!-- //Mostra o nome do usuario -->
-            &nbsp;<g:link controller="policia" action="sair">Sair!</g:link> <!-- //botao de logoff --></h1>
+            &nbsp;<g:link controller="policial" action="paginaLogin">Sair!</g:link> <!-- //botao de logoff --></h1>
 			<p><br/>Você pode fazer a consulta de veículos roubados de RJ e assim evitar de ter que devolver o
             seu carro e ainda perder todo o seu investimento.
             É importante que vários pontos sejam considerados quando você compra um carro usado, se for em
@@ -208,7 +208,6 @@
             <li>Filtro no login</li>
             <li>Busca de Chassi de carros</li>
             <li>Está no Git Hub com o Nome de <a href="https://github.com/CaDu0102/CarStolen1" target="_blank">CarStolen1</a></li>
-
 
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:<br/></h2>

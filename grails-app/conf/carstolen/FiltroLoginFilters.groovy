@@ -3,7 +3,7 @@ package carstolen
 class FiltroLoginFilters {
 
     def filters = {  // filtro de usuarios
-        all(controller:'policial', action:'*',invert:true) {
+        all(controller:'policial', action:'paginaLogin',invert:true) {
             before = {
 
                 if(session.policial){
